@@ -1,0 +1,203 @@
+/* ---------- Global Styles ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  color: #1e1e2f;
+  background-color: #f8f6fb;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: #4b2e83; /* Deep purple */
+  color: white;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav h1 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:focus,
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Hero Section ---------- */
+.hero {
+  text-align: center;
+  padding: 6rem 2rem;
+  background: linear-gradient(to bottom right, #d8c8f8, #f3e9ff);
+  color: #2e175c;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #4b2e83;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ---------- Section Layout ---------- */
+section {
+  padding: 4rem 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  color: #4b2e83;
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+}
+
+/* ---------- About Section ---------- */
+#about p {
+  font-size: 1.05rem;
+}
+
+.profile-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 1.5rem;
+  border: 4px solid #4b2e83;
+  box-shadow: 0 4px 10px rgba(75, 46, 131, 0.2);
+}
+
+/* ---------- Projects Section ---------- */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #e0d7f8;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover,
+.project-card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(75, 46, 131, 0.2);
+}
+
+.project-card h3 {
+  color: #4b2e83;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- Skills Section ---------- */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.skills-list li {
+  background: #e8ddff;
+  color: #2e175c;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+/* ---------- Contact Section ---------- */
+#contact ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#contact a {
+  color: #4b2e83;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#contact a:hover,
+#contact a:focus {
+  text-decoration: underline;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background: #4b2e83;
+  color: white;
+  font-size: 0.9rem;
+}
+
+/* ---------- Accessibility Enhancements ---------- */
+a:focus,
+button:focus {
+  outline: 3px solid #b497ff;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+  nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 0.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  section {
+    padding: 3rem 1.5rem;
+  }
+}
